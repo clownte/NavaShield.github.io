@@ -1,3 +1,4 @@
-# NavaShield.github.io
-
-Crash gif lul
+# IM GOING ON TONIGHT
+RIP That 
+# PUSSY
+# EYY
