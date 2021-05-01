@@ -8,4 +8,21 @@
   <body>
     <button onclick="sendMessage()">Send</button>
   </body>
+
+  <script>
+    function sendMessage() {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/838192426563797032/g-la_9HeLh_YTySFM9zPuLFM5q_JH3jCD-TmYyJsvdlIHqtGUAIjFR8JmKgH5z3AHvQX");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username: "My Webhook Name",
+        avatar_url: "https://NavaShield.github.io/Webhook/Test/retard.png",
+        content: "The message to send"
+      }
+
+      request.send(JSON.stringify(params));
+    }
+  </script>
 </html>
