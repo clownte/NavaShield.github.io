@@ -6,9 +6,11 @@
     <title>Sup Bro</title>
   </head>
   <body>
-    <input id="content2" type="text" name="Name" size="20"/>
+    <input id="pfp" type="text" name="Profile Picture" value="https://qph.fs.quoracdn.net/main-thumb-243889704-200-eifodtyypqcgoxflvqnmrvbmulitmyxr.jpeg" size="20"/> <small> Profile Picture </small> <br/>
+    <input id="user" type="text" name="Username" size="20" value="Username" /> <small> Username </small> <br/>
+    <input id="mes" type="text" name="Message" size="20" value="Message" /> <small> Message </small> <br/>
     <button onclick="sendMessage()">Send</button>
-
+        
     <script>
     function sendMessage() {
       var request = new XMLHttpRequest();
@@ -17,9 +19,9 @@
       request.setRequestHeader('Content-type', 'application/json');
 
       var params = {
-        username: "My Webhook Name",
-        avatar_url: "https://NavaShield.github.io/Webhook/Test/retard.png",
-        content: document.querySelector("#content2")?.value
+        username: document.querySelector("#user")?.value,
+        avatar_url: document.querySelector("#pfp")?.value,
+        content: document.querySelector("#mes")?.value
       }
 
       request.send(JSON.stringify(params));
