@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discord Webhook Tutorial</title>
+    <title>Sup Bro</title>
   </head>
   <body>
-    <input id="content" type="text" name="Name" size="20"/>
+    <input id="content2" type="text" name="Name" size="20"/>
     <button onclick="sendMessage()">Send</button>
 
     <script>
@@ -19,7 +19,7 @@
       var params = {
         username: "My Webhook Name",
         avatar_url: "https://NavaShield.github.io/Webhook/Test/retard.png",
-        content: document.querySelector("#content")?.value
+        content: document.querySelector("#content2")?.value
       }
 
       request.send(JSON.stringify(params));
