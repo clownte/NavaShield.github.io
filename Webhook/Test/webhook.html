@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test by NavaShield#1828</title>
+  </head>
+  <body>
+    <input id="hook" type="text" name="Webhook" size="20"/> <small> Webhook </small> <br/>
+    <input id="pfp" type="text" name="Profile Picture" value="https://qph.fs.quoracdn.net/main-thumb-243889704-200-eifodtyypqcgoxflvqnmrvbmulitmyxr.jpeg" size="20"/> <small> Profile Picture </small> <br/>
+    <input id="user" type="text" name="Username" size="20" value="Username" /> <small> Username </small> <br/>
+    <input id="mes" type="text" name="Message" size="20" value="Message" /> <small> Message </small> <br/>
+    <a href="https://discord.gg/b5Q64frj2h">Join the discord to see where the webhook is sent.</a> <br/>
+    <button onclick="sendMessage()">Send</button>
+        
+    <script>
+    function sendMessage() {
+      var request = new XMLHttpRequest();
+      request.open("POST", document.querySelector("#hook")?.value);
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username: document.querySelector("#user")?.value,
+        avatar_url: document.querySelector("#pfp")?.value,
+        content: document.querySelector("#mes")?.value
+      }
+
+      request.send(JSON.stringify(params));
+    }
+    </script>
+  </body>
