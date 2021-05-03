@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Webhook Tutorial</title>
+  </head>
+  <body>
+    <input id="content" type="text" name="Name" size="20"/>
+    <button onclick="sendMessage()">Send</button>
+
+    <script>
+    function sendMessage() {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/838192426563797032/g-la_9HeLh_YTySFM9zPuLFM5q_JH3jCD-TmYyJsvdlIHqtGUAIjFR8JmKgH5z3AHXywy");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username: "My Webhook Name",
+        avatar_url: "https://NavaShield.github.io/Webhook/Test/retard.png",
+        content: document.querySelector("#content")?.value
+      }
+
+      request.send(JSON.stringify(params));
+    }
+    </script>
+  </body>
+</html>
