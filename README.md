@@ -1,4 +1,1 @@
-# IM GOING IN TONIGHT
-RIP That 
-# PUSSY
-# EYY
+# This is just a dump of random files and tests.
